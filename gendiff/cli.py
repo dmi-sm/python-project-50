@@ -12,4 +12,4 @@ def parse_arguments():
     parser.add_argument('-f', '--format', help='set format of output')
 
     args = parser.parse_args()
-    return args
+    return args.first_file, args.second_file

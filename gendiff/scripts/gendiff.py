@@ -1,11 +1,11 @@
 # !/usr/bin/env python3
 from gendiff.cli import parse_arguments
-from gendiff.generate_diffrent import generate_diff
+import gendiff
 
 
 def main():
     args = parse_arguments()
-    print(generate_diff(args))
+    print(gendiff.generate_diff(args))
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 import json
+
 STATUS = {
     'in_first': '  - ',
     'in_second': '  + ',

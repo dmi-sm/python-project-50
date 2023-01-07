@@ -19,5 +19,8 @@ package-reinstall: # переустановить пакет
 lint: # запустить проверку линтером
 	poetry run flake8 gendiff
 
+tests: # запустить тестирование
+	poetry run pytest
+
 package-uninstall: # удалить пакет из окружения пользователя
 	python3 -m pip uninstall dist/*.whl

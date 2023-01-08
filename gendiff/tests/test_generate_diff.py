@@ -2,7 +2,10 @@ import pytest
 from gendiff.generate_difference import generate_diff
 
 
-files = 'files/file1.json', 'files/file2.json'
+files = (
+    'gendiff/tests/fixtures/file1.json',
+    'gendiff/tests/fixtures/file2.json'
+)
 result = 'gendiff/tests/fixtures/test'
 
 

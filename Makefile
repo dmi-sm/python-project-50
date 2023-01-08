@@ -22,5 +22,8 @@ lint: # запустить проверку линтером
 tests: # запустить тестирование
 	poetry run pytest
 
+test-coverage:
+	poetry run pytest --cov=gendiff --cov-report xml
+	
 package-uninstall: # удалить пакет из окружения пользователя
 	python3 -m pip uninstall dist/*.whl

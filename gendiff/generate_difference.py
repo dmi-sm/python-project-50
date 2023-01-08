@@ -1,4 +1,5 @@
-import json
+from gendiff.parser import parser
+
 
 STATUS = {
     'in_first': '  - ',
@@ -7,15 +8,9 @@ STATUS = {
 }
 
 
-def get_content(path):
-    with open(path, 'r') as file:
-        return json.load(file)
-
-
-def generate_diff(files, format=None):
-    first, second = files
-    first = dict(sorted((get_content(first)).items()))
-    second = dict(sorted((get_content(second)).items()))
+def generate_diff(first, second, format=None):
+    first = dict(sorted((parser(first)).items()))
+    second = dict(sorted((parser(second)).items()))
     all_keys = sorted(set(first | second))
     diff = '{\n'
 

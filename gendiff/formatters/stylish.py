@@ -1,11 +1,11 @@
-def get_stylish(diff_list, depth=0):
+def get_stylish(tree, depth=0):
     result = '{\n'
     indent = '  '
 
     for _ in range(depth):
         indent += '    '
 
-    for node in diff_list:
+    for node in tree:
         name = node.get('name')
         status = node.get('status')
         value = node.get('value', '')

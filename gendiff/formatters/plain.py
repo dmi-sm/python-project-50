@@ -23,6 +23,8 @@ def get_plain(tree, path=''):
 def get_string(object):
     if isinstance(object, dict):
         return '[complex value]'
+    elif isinstance(object, int):
+        return object
     elif object is None:
         return 'null'
     elif isinstance(object, bool):

@@ -14,7 +14,7 @@ expected_nested_plain = 'gendiff/tests/fixtures/nested/testnestedplain'
 
 def test_flat_stylish_generate_diff():
     with open(expected_flat_stylish) as expected:
-        result = generate_diff(first_flat, second_flat)
+        result = generate_diff(first_flat, second_flat, 'stylish')
         assert result == expected.read()
 
 

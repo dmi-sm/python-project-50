@@ -10,9 +10,11 @@ def get_plain(tree, path=''):
         if status == 'nested':
             result.append(get_plain(node.get('children'), path_view + '.'))
         if status == 'modified':
-            result.append(f"Property '{path_view}' was updated. From {value} to {get_string(node.get('new_value'))}")
+            result.append(f"Property '{path_view}' was updated. From {value} "
+                          f"to {get_string(node.get('new_value'))}")
         if status == 'added':
-            result.append(f"Property '{path_view}' was added with value: {value}")
+            result.append(f"Property '{path_view}' was added with value: "
+                          f"{value}")
         if status == 'removed':
             result.append(f"Property '{path_view}' was removed")
     return '\n'.join(result)

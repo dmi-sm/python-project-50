@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.4.0"
+version = "0.5.0"
 description = "Show difference between two data files"
 authors = ["Dmitrii Mikailov <dmi.sm.rf@yandex.ru>"]
 readme = "README.md"

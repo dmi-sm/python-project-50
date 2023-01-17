@@ -39,10 +39,8 @@ def get_diff_tree(first_source, second_source):
             diff_tree.append({
                 'name': key,
                 'status': 'nested',
-                'children': get_diff_tree(
-                                first_source.get(key),
-                                second_source.get(key)
-                            )
+                'children': get_diff_tree(first_source.get(key),
+                                          second_source.get(key))
             })
             continue
 

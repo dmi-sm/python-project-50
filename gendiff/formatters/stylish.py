@@ -8,21 +8,21 @@ def get_stylish(tree, depth=0):
     for node in tree:
         name = node.get('name')
         status = node.get('status')
-        value = node.get('value', '')
+        value = node.get('value')
 
         if status == 'nested':
             value = get_stylish(node.get('children'), depth + 1)
             result += f"{indent}  {name}: {value}\n"
-        elif status == 'unmodified':
+        if status == 'unmodified':
             value = get_string(value, indent)
             result += f"{indent}  {name}: {value}\n"
-        elif status == 'added':
+        if status == 'added':
             value = get_string(value, indent)
             result += f"{indent}+ {name}: {value}\n"
-        elif status == 'removed':
+        if status == 'removed':
             value = get_string(value, indent)
             result += f"{indent}- {name}: {value}\n"
-        else:
+        if status == 'modified':
             value = get_string(value, indent)
             result += f"{indent}- {name}: {value}\n"
             value = get_string(node.get('new_value'), indent)
@@ -40,10 +40,9 @@ def get_string(object, indent):
             value = get_string(object.get(key), indent)
             result += f'{indent}  {key}: {value}\n'
         result += indent[:-2] + '}'
-    elif object is None:
-        result = 'null'
-    elif isinstance(object, bool):
-        result = str(object).lower()
-    else:
-        result = str(object)
-    return result
+        return result
+    if isinstance(object, bool):
+        return str(object).lower()
+    if object is None:
+        return 'null'
+    return str(object)

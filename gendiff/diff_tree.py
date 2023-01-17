@@ -9,31 +9,6 @@ def get_diff_tree(first_source, second_source):
     removed = first_keys - second_keys
 
     for key in all_keys:
-        if key in added:
-            diff_tree.append({
-                'name': key,
-                'status': 'added',
-                'value': second_source.get(key),
-            })
-            continue
-
-        if key in removed:
-            diff_tree.append({
-                'name': key,
-                'status': 'removed',
-                'value': first_source.get(key),
-
-            })
-            continue
-
-        if first_source.get(key) == second_source.get(key):
-            diff_tree.append({
-                'name': key,
-                'status': 'unmodified',
-                'value': first_source.get(key),
-            })
-            continue
-
         if isinstance(first_source.get(key), dict) \
                 and isinstance(second_source.get(key), dict):
             diff_tree.append({
@@ -42,13 +17,35 @@ def get_diff_tree(first_source, second_source):
                 'children': get_diff_tree(first_source.get(key),
                                           second_source.get(key))
             })
-            continue
 
-        diff_tree.append({
-            'name': key,
-            'status': 'modified',
-            'value': first_source.get(key),
-            'new_value': second_source.get(key),
-        })
+        elif key in added:
+            diff_tree.append({
+                'name': key,
+                'status': 'added',
+                'value': second_source.get(key),
+            })
+
+        elif key in removed:
+            diff_tree.append({
+                'name': key,
+                'status': 'removed',
+                'value': first_source.get(key),
+
+            })
+
+        elif first_source.get(key) == second_source.get(key):
+            diff_tree.append({
+                'name': key,
+                'status': 'unmodified',
+                'value': first_source.get(key),
+            })
+
+        else:
+            diff_tree.append({
+                'name': key,
+                'status': 'modified',
+                'value': first_source.get(key),
+                'new_value': second_source.get(key),
+            })
 
     return diff_tree

@@ -1,9 +1,7 @@
-def get_stylish(tree, depth=0):
+def get_stylish(tree, depth=0):  # noqa c901
     result = '{\n'
     indent = '  '
-
-    for _ in range(depth):
-        indent += '    '
+    indent += '    ' * depth
 
     for node in tree:
         name = node.get('name')

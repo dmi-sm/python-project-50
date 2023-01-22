@@ -13,6 +13,7 @@ def parse_arguments():
         '-f', '--format',
         default='stylish',
         choices=('stylish', 'plain', 'json'),
-        help='set format of output'
+        metavar='FORMAT',
+        help='format style, supported: %(choices)s. Default: %(default)s'
     )
     return parser.parse_args()

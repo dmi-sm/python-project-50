@@ -30,12 +30,12 @@ $gendiff [-f] [--format] <file_path> <file_path>
 [![asciicast](https://asciinema.org/a/tgaJRurUYnUgceQ6jePp7vZEr.svg)](https://asciinema.org/a/tgaJRurUYnUgceQ6jePp7vZEr)
 [![asciicast](https://asciinema.org/a/rbZr9CJQesoIUws7jA9PW9QDu.svg)](https://asciinema.org/a/rbZr9CJQesoIUws7jA9PW9QDu)
 
-### Сравнение вложенных структур и ввывод в формате по умолчанию: stylish
+### Сравнение вложенных структур и вывод в формате по умолчанию: stylish
 [![asciicast](https://asciinema.org/a/COzZWhnst5lEkc13fNXICpZBx.svg)](https://asciinema.org/a/COzZWhnst5lEkc13fNXICpZBx)
 [![asciicast](https://asciinema.org/a/ABuYAn06yzg1Pc5DWEnensmXH.svg)](https://asciinema.org/a/ABuYAn06yzg1Pc5DWEnensmXH)
 
-### Сравнение вложенных структур и ввывод в формате plain
+### Сравнение вложенных структур и вывод в формате plain
 [![asciicast](https://asciinema.org/a/dfBvFlWvohRIl54jYgZ6gcYDK.svg)](https://asciinema.org/a/dfBvFlWvohRIl54jYgZ6gcYDK)
 
-### Сравнение вложенных структур и ввывод в формате json
+### Сравнение вложенных структур и вывод в формате json
 [![asciicast](https://asciinema.org/a/wZ2jXto9gw7xPCeqWXjC0nIb0.svg)](https://asciinema.org/a/wZ2jXto9gw7xPCeqWXjC0nIb0)

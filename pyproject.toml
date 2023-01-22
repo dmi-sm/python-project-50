@@ -3,9 +3,18 @@ name = "hexlet-code"
 version = "0.5.0"
 description = "Show difference between two data files"
 authors = ["Dmitrii Mikailov <dmi.sm.rf@yandex.ru>"]
+repository = "https://github.com/dmi-sm/python-project-50"
 readme = "README.md"
 packages = [
   { include = "gendiff" },
+]
+
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Software Development :: Build Tools"
 ]
 
 [tool.poetry.dependencies]
